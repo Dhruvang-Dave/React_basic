@@ -23,7 +23,7 @@ function App() {
   const toggleMode = () => {
     if (mode === "light") {
       setMode("dark");
-      document.body.style.backgroundColor = "#041222";
+      document.body.style.backgroundColor = "#042242";
       showAlert("Dark mode is now enabled", "success");
     } else {
       setMode("light");
@@ -39,8 +39,8 @@ function App() {
       <Alert alert={alert} />
       <div className="container my-3">
             <Routes>
-            <Route path="/" element={<TextForm heading="Enter the text to analyze" showAlert={showAlert}  mode={mode}/>} />
-            <Route path="About/*" element={<About />} />
+            <Route path="/" element={<TextForm heading="Rectify App - Word counter | Character counter | Remove extra spaces" showAlert={showAlert}  mode={mode}/>} />
+            <Route path="/About" element={<About mode={mode}/>} />
           </Routes>
           {/* React Router v5 */}
               {/* <Switch>
